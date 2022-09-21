@@ -148,7 +148,9 @@ class HomePage extends StatelessWidget {
                     color: Colors.red.shade800,
                     child: Column(
                       children: [
-                        Image.network(datalist[index].cityImage.toString()),
+                        Hero(
+                            tag: datalist[index].cityName.toString(),
+                            child: Image.network(datalist[index].cityImage.toString())),
                         Center(child: Text(datalist[index].cityName.toString(),style: TextStyle(color: Colors.white,fontSize: 20),)),
                       ],
                     ),
